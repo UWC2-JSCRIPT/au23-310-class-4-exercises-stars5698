@@ -1,3 +1,6 @@
+// Donna Quach, JavaScript 310B, Autumn 2023
+// Class 4 Exercises 
+
 const cards = [
   { val: 2, displayVal: '2', suit: 'hearts' },
   { val: 3, displayVal: '3', suit: 'hearts' },
@@ -58,4 +61,10 @@ const cards = [
  *
  * @param {array} deck A deck of cards
  */
-const logCardDeck = deck => {};
+const logCardDeck = deck => {
+  for(let i = 0; i < deck.length; i++) {
+    console.log(`val: ${deck[i].val}, displayVal: ${deck[i].displayVal}, suit: ${deck[i].suit}`);
+  }
+};
+
+console.log(logCardDeck(cards)); // const cards represents deck param
