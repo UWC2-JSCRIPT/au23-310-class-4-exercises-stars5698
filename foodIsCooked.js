@@ -1,3 +1,6 @@
+// Donna Quach, JavaScript 310B, Autumn 2023
+// Class 4 Exercises 
+
 /**
  * Determines whether meat temperature is high enough
  * @param {string} kind 
@@ -7,7 +10,67 @@
  */
 const foodIsCooked = function(kind, internalTemp, doneness) {
   // Write function HERE
-
+  isCooked = false; // As an initializer (before we run if statements)
+  // Had to use strict equality '===' for checking kind and doneness in order to return correct isCooked boolean
+  // (i.e. Using '==' did not work)
+  // Checking to see if user provided "chicken" for kind 
+  if(kind === 'chicken')
+  {
+    // Then check if provided internal temperature is OK
+    if(internalTemp >= 165) 
+    {
+      isCooked = true; 
+      return isCooked; 
+    }
+    else
+    {
+      return isCooked; // Which would be false 
+    }
+  }
+  // Checking to see if user provided "beef" for kind 
+  if(kind === 'beef') 
+  {
+    // Then check if provided doneness and internal temperature are OK 
+    // First for well-done beef 
+    if(doneness === 'well')
+    {
+      if(internalTemp >= 155) 
+      {
+        isCooked = true; 
+        return isCooked; 
+      }
+      else 
+      {
+        return isCooked; // Which would be false
+      }
+    }
+    // Then for medium rare beef
+    if(doneness === 'medium')
+    {
+      if(internalTemp >= 138) 
+      {
+        isCooked = true; 
+        return isCooked; 
+      }
+      else 
+      {
+        return isCooked; // Which would be false
+      }
+    }
+    // Then for rare beef 
+    if(doneness === 'rare')
+    {
+      if(internalTemp >= 125) 
+      {
+        isCooked = true; 
+        return isCooked; 
+      }
+      else 
+      {
+        return isCooked; // Which would be false
+      }
+    }
+  }
 }
 
 

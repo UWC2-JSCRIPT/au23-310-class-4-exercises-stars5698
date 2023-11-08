@@ -1,3 +1,6 @@
+// Donna Quach, JavaScript 310B, Autumn 2023
+// Class 4 Exercises 
+
 const cards = [
   { val: 2, displayVal: "2", suit: "hearts" },
   { val: 3, displayVal: "3", suit: "hearts" },
@@ -21,7 +24,11 @@ const cards = [
  * @param {array} cards
  * @return {string} displayVal
  */
-const cardsWorthTen = cards => {};
+const cardsWorthTen = cards => {
+  const cardsThatAreTen = cards.filter((card) => card.val === 10); 
+  const cardTenDisplayVals = cardsThatAreTen.map(cardTen => cardTen.displayVal);
+  console.log(cardTenDisplayVals); 
+};
 
 console.log(cardsWorthTen(cards));
 // should return/log "10, Jack, Queen, King"
